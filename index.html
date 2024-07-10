@@ -9,23 +9,25 @@
 <body>
 
     <!-- Navigation -->
+    <div class="navbar">
+        <img src="logo.png" alt="Company Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#banking">Banking Services</a></li>
+                <li><a href="#health">Health Insurance</a></li>
+                <li><a href="#liability">Liability Insurance</a></li>
+                <li><a href="#study">Study Opportunities</a></li>
+                <li><a href="#learning-german">Learning German</a></li>
+                <li><a href="#comparison">Comparison</a></li>
+                <li><a href="#video">Video</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
     <header>
-        <div class="navbar">
-            <img src="logo.png" alt="Company Logo" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="#overview">Overview</a></li>
-                    <li><a href="#banking">Banking Services</a></li>
-                    <li><a href="#health">Health Insurance</a></li>
-                    <li><a href="#liability">Liability Insurance</a></li>
-                    <li><a href="#study">Study Opportunities</a></li>
-                    <li><a href="#learning-german">Learning German</a></li>
-                    <li><a href="#comparison">Comparison</a></li>
-                    <li><a href="#video">Video</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="hero">
+        <div class="hero hidden">
             <h1>Get the Best Services with RRR Group</h1>
             <p>Your guide to the best banking, health insurance, and liability insurance services in Germany.</p>
             <p>Call us at: <span class="font-bold">+4915219739709</span></p>
@@ -34,12 +36,12 @@
     </header>
 
     <!-- Video Section -->
-    <div class="video-container">
+    <div class="video-container hidden">
         <iframe src="https://www.youtube.com/embed/6RSV3JY9j0Q?autoplay=1&mute=1&loop=1&playlist=6RSV3JY9j0Q" frameborder="0" allowfullscreen></iframe>
     </div>
 
     <!-- Main Content -->
-    <main>
+    <main class="hidden">
         <!-- Features Section -->
         <section id="features">
             <div class="feature-block">
@@ -90,142 +92,4 @@
                 <li>Free checking accounts with no monthly maintenance fees</li>
                 <li>Low or no fees for transactions such as ATM withdrawals and payments</li>
                 <li>Convenient online banking features including mobile apps and digital statements</li>
-                <li>Special student offers and discounts on loans and credit cards</li>
-            </ul>
-        </section>
-
-        <section id="health">
-            <h2>Health Insurance Benefits</h2>
-            <ul>
-                <li>Comprehensive coverage including hospital stays, outpatient care, and prescription medications</li>
-                <li>Access to a wide network of healthcare providers</li>
-                <li>Preventive care services such as vaccinations and routine screenings</li>
-                <li>Discounted rates and special packages for students</li>
-            </ul>
-            <h3>Why Barmer is the Best for Health Insurance</h3>
-            <ul>
-                <li>Extensive coverage options from basic to premium plans</li>
-                <li>Excellent customer service with 24/7 support and multilingual services</li>
-                <li>High satisfaction rate among users</li>
-                <li>Affordable premiums with discounts for students and young professionals</li>
-                <li>Additional benefits such as wellness programs and fitness discounts</li>
-            </ul>
-        </section>
-
-        <section id="liability">
-            <h2>Liability Insurance Benefits</h2>
-            <ul>
-                <li>Protection against personal liability claims</li>
-                <li>Coverage for damages and legal costs</li>
-                <li>Special packages for students and employees</li>
-                <li>Essential for international students and employees</li>
-            </ul>
-            <h3>Why Feather Insurance is the Best for Liability and Legal Insurance</h3>
-            <ul>
-                <li>Comprehensive liability and legal coverage</li>
-                <li>Easy online application process</li>
-                <li>Affordable rates for students and employees</li>
-                <li>Excellent customer reviews and high satisfaction</li>
-            </ul>
-        </section>
-
-        <section id="study">
-            <h2>Study Opportunities in Germany</h2>
-            <ul>
-                <li>World-class education system with top-ranked universities</li>
-                <li>Affordable tuition fees at public universities</li>
-                <li>Strong emphasis on research and innovation</li>
-                <li>Internship opportunities with leading companies</li>
-                <li>Pathways to stay and work after graduation</li>
-            </ul>
-        </section>
-
-        <section id="learning-german">
-            <h2>Learning German</h2>
-            <ul>
-                <li>Enhance career opportunities by learning German</li>
-                <li>Ease of integration into German society and culture</li>
-                <li>Access to quality education in German universities</li>
-                <li>Improved travel experiences in German-speaking countries</li>
-            </ul>
-            <h3>Basic German Phrases</h3>
-            <ul>
-                <li>Guten Morgen (Good morning)</li>
-                <li>Wie geht's? (How are you?)</li>
-                <li>Danke (Thank you)</li>
-                <li>Entschuldigung (Excuse me)</li>
-                <li>Wo ist...? (Where is...?)</li>
-            </ul>
-        </section>
-
-        <section id="comparison">
-            <h2>Comparison: Barmer vs. Feather Insurance</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Barmer (Health Insurance)</th>
-                        <th>Feather (Liability and Legal Insurance)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Coverage Options</td>
-                        <td>Extensive</td>
-                        <td>Comprehensive</td>
-                    </tr>
-                    <tr>
-                        <td>Customer Service</td>
-                        <td>24/7 Support, Multilingual</td>
-                        <td>Excellent, Highly Rated</td>
-                    </tr>
-                    <tr>
-                        <td>Premiums</td>
-                        <td>Affordable with Discounts</td>
-                        <td>Affordable Rates</td>
-                    </tr>
-                    <tr>
-                        <td>Additional Benefits</td>
-                        <td>Wellness Programs, Fitness Discounts</td>
-                        <td>Easy Online Application, High Satisfaction</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section id="video">
-            <h2>Watch Our Introduction Video</h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/6RSV3JY9j0Q" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2023 RRR Group. All rights reserved.</p>
-        <p>Contact us at <a href="mailto:info@rrrgroup.me" class="text-yellow-300 hover:text-yellow-400">info@rrrgroup.me</a></p>
-        <p>Call us at <span class="text-yellow-300">+4915219739709</span></p>
-    </footer>
-
-    <!-- JavaScript for Scroll Animations -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const hero = document.querySelector('.hero');
-            const mainContent = document.querySelector('main');
-
-            window.addEventListener('scroll', () => {
-                let scrollPosition = window.scrollY;
-
-                if (scrollPosition > 0) {
-                    hero.style.opacity = 1;
-                }
-
-                if (scrollPosition > window.innerHeight) {
-                    mainContent.style.opacity = 1;
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+      
