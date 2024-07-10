@@ -13,6 +13,12 @@ header {
     border-bottom: 5px solid #3e8e41;
 }
 
+.logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
 nav {
     background-color: #333;
 }
@@ -34,6 +40,7 @@ nav ul li a {
     text-decoration: none;
     padding: 14px 20px;
     display: block;
+    transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
