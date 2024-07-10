@@ -213,6 +213,8 @@
     <!-- JavaScript for Scroll Animations -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM fully loaded and parsed');
+
             const elements = document.querySelectorAll('.hidden');
 
             const observer = new IntersectionObserver(entries => {
@@ -220,12 +222,18 @@
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
                         entry.target.classList.remove('hidden');
+                        observer.unobserve(entry.target);
                     }
                 });
             });
 
             elements.forEach(element => {
                 observer.observe(element);
+            });
+
+            // Log each hidden element to confirm they are being observed
+            elements.forEach(element => {
+                console.log('Observing element:', element);
             });
         });
     </script>
