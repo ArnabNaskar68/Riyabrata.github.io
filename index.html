@@ -12,6 +12,7 @@
             background-size: cover;
             background-position: center;
             position: relative;
+            height: 100vh;
         }
         .video-bg {
             position: absolute;
@@ -21,10 +22,12 @@
             height: 400px;
             z-index: -1;
             overflow: hidden;
+            pointer-events: none;
         }
         .video-bg iframe {
             width: 100%;
             height: 100%;
+            pointer-events: none;
         }
     </style>
 </head>
@@ -54,6 +57,9 @@
             <h1 class="text-6xl font-bold mb-4">Get the Best Services with RRR Group</h1>
             <p class="text-2xl mb-6">Your guide to the best banking, health insurance, and liability insurance services in Germany.</p>
             <a href="#overview" class="bg-yellow-400 text-gray-800 px-6 py-3 rounded-lg hover:bg-yellow-500 transition duration-300">Learn More</a>
+        </div>
+        <div class="video-bg">
+            <iframe src="https://www.youtube.com/embed/6RSV3JY9j0Q?autoplay=1&mute=1&loop=1&playlist=6RSV3JY9j0Q" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
 
@@ -223,7 +229,7 @@
         <section id="video" class="py-12">
             <h2 class="text-4xl font-bold mb-6 text-center">Watch Our Introduction Video</h2>
             <div class="flex justify-center">
-                <iframe class="w-full md:w-2/3 h-64 md:h-96" src="https://www.youtube.com/watch?v=6RSV3JY9j0Q" frameborder="0" allowfullscreen></iframe>
+                <iframe class="w-full md:w-2/3 h-64 md:h-96" src="https://www.youtube.com/embed/6RSV3JY9j0Q" frameborder="0" allowfullscreen></iframe>
             </div>
         </section>
     </main>
@@ -233,8 +239,8 @@
         <div class="container mx-auto text-center">
             <p>&copy; 2023 RRR Group. All rights reserved.</p>
             <p>Contact us at <a href="mailto:info@rrrgroup.me" class="text-yellow-300 hover:text-yellow-400">info@rrrgroup.me</a></p>
+            <p>Call us at <span class="text-yellow-300">+4915219739709</span></p>
         </div>
     </footer>
 </body>
 </html>
-
