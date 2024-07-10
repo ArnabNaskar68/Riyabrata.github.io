@@ -93,7 +93,7 @@ nav ul li a:hover {
 .video-container {
     width: 100%;
     height: 60vh;
-    margin-top: -30vh; /* Adjust this value to overlap the sections properly */
+    margin-top: -30vh;
 }
 
 video {
@@ -176,3 +176,15 @@ th {
 footer {
     background-color: #333;
     color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
