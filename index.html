@@ -4,91 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RRR Group</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        .hero-video {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .hero-video iframe {
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+        .image-bg {
+            background-image: url('hero-image.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+        }
+        .floating-nav {
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+        .floating-nav a {
+            margin: 0 10px;
+        }
+    </style>
 </head>
-<body>
+
+<body class="bg-gray-100 text-gray-800">
 
     <!-- Navigation -->
-    <div class="navbar">
-        <img src="logo.png" alt="Company Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#banking">Banking Services</a></li>
-                <li><a href="#health">Health Insurance</a></li>
-                <li><a href="#liability">Liability Insurance</a></li>
-                <li><a href="#study">Study Opportunities</a></li>
-                <li><a href="#learning-german">Learning German</a></li>
-                <li><a href="#comparison">Comparison</a></li>
-                <li><a href="#video">Video</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <!-- Hero Section -->
-    <header>
-        <div class="hero hidden">
-            <h1>Get the Best Services with RRR Group</h1>
-            <p>Your guide to the best banking, health insurance, and liability insurance services in Germany.</p>
-            <p>Call us at: <span class="font-bold">+4915219739709</span></p>
-            <a href="#overview" class="btn-primary">Learn More</a>
+    <header class="bg-blue-900 text-white shadow-lg relative">
+        <div class="container mx-auto flex justify-between items-center p-5">
+            <img src="logo.png" alt="Company Logo" class="h-16 w-16 rounded-full">
+            <div class="floating-nav flex space-x-6 text-lg">
+                <a href="#overview" class="bg-white text-blue-900 px-4 py-2 rounded hover:bg-yellow-300 transition duration-300">Overview</a>
+                <a href="#banking" class="bg-white text-blue-900 px-4 py-2 rounded hover:bg-yellow-300 transition duration-300">Banking Services</a>
+                <a href="#health" class="bg-white text-blue-900 px-4 py-2 rounded hover:bg-yellow-300 transition duration-300">Health Insurance</a>
+                <a href="#liability" class="bg-white text-blue-900 px-4 py-2 rounded hover:bg-yellow-300 transition duration-300">Liability Insurance</a>
+                <a href="#study" class="bg-white text-blue-900 px-4 py-2 rounded hover:bg-yellow-300 transition duration-300">Study Opportunities</a>
+                <a href="#learning-german" class="bg-white text-blue-900 px-4 py-2 rounded hover:bg-yellow-300 transition duration-300">Learning German</a>
+                <a href="#comparison" class="bg-white text-blue-900 px-4 py-2 rounded hover:bg-yellow-300 transition duration-300">Comparison</a>
+                <a href="#video" class="bg-white text-blue-900 px-4 py-2 rounded hover:bg-yellow-300 transition duration-300">Video</a>
+            </div>
         </div>
     </header>
 
-    <!-- Video Section -->
-    <div class="video-container hidden">
-        <iframe src="https://www.youtube.com/embed/6RSV3JY9j0Q?autoplay=1&mute=1&loop=1&playlist=6RSV3JY9j0Q" frameborder="0" allowfullscreen></iframe>
-    </div>
+    <!-- Hero Section with Video -->
+    <section class="relative">
+        <div class="hero-video">
+            <iframe src="https://www.youtube.com/embed/6RSV3JY9j0Q?autoplay=1&mute=1&loop=1&playlist=6RSV3JY9j0Q" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="hero-text animate__animated animate__fadeIn">
+            <h1 class="text-6xl font-bold mb-4">Get the Best Services with RRR Group</h1>
+            <p class="text-2xl mb-6">Your guide to the best banking, health insurance, and liability insurance services in Germany.</p>
+            <p class="text-xl mb-4">Call us at: <span class="font-bold">+4915219739709</span></p>
+            <a href="#overview" class="bg-yellow-400 text-gray-800 px-6 py-3 rounded-lg hover:bg-yellow-500 transition duration-300">Learn More</a>
+        </div>
+    </section>
 
-    <!-- Main Content -->
-    <main class="hidden">
-        <!-- Features Section -->
-        <section id="features">
-            <div class="feature-block">
-                <h2>Banking Services</h2>
+    <!-- Image Section -->
+    <section class="image-bg"></section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="container mx-auto py-12">
+        <h2 class="text-4xl font-bold mb-6 text-center">Overview of Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg animate__animated animate__fadeInLeft">
+                <h3 class="text-3xl font-bold mb-4">Webinar Overview</h3>
+                <ul class="list-disc list-inside">
+                    <li>Visa Opportunities</li>
+                    <li>Job Market Insights</li>
+                    <li>Study in Germany</li>
+                    <li>Expert Advice</li>
+                    <li>Exclusive Offers</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg animate__animated animate__fadeInRight">
+                <h3 class="text-3xl font-bold mb-4">Why You Should Attend</h3>
+                <ul class="list-disc list-inside">
+                    <li>Discover visa opportunities for Indian nationals</li>
+                    <li>Gain insights into the German job market</li>
+                    <li>Get guidance on studying in Germany</li>
+                    <li>Hear from industry experts</li>
+                    <li>Receive exclusive offers on courses</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container mx-auto py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center animate__animated animate__fadeInLeft">
+                <h2 class="text-2xl font-bold mb-4">Banking Services</h2>
                 <p>Free checking accounts, low fees, and convenient online banking features.</p>
             </div>
-            <div class="feature-block">
-                <h2>Health Insurance</h2>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center animate__animated animate__fadeInUp">
+                <h2 class="text-2xl font-bold mb-4">Health Insurance</h2>
                 <p>Comprehensive coverage, wide network of providers, and preventive care services.</p>
             </div>
-            <div class="feature-block">
-                <h2>Liability Insurance</h2>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center animate__animated animate__fadeInRight">
+                <h2 class="text-2xl font-bold mb-4">Liability Insurance</h2>
                 <p>Protection against personal liability claims and coverage for damages and legal costs.</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Overview Section -->
-        <section id="overview">
-            <h2>Overview of Our Services</h2>
-            <div class="grid">
-                <div class="feature-block">
-                    <h3>Webinar Overview</h3>
-                    <ul>
-                        <li>Visa Opportunities</li>
-                        <li>Job Market Insights</li>
-                        <li>Study in Germany</li>
-                        <li>Expert Advice</li>
-                        <li>Exclusive Offers</li>
-                    </ul>
-                </div>
-                <div class="feature-block">
-                    <h3>Why You Should Attend</h3>
-                    <ul>
-                        <li>Discover visa opportunities for Indian nationals</li>
-                        <li>Gain insights into the German job market</li>
-                        <li>Get guidance on studying in Germany</li>
-                        <li>Hear from industry experts</li>
-                        <li>Receive exclusive offers on courses</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Detailed Sections -->
-        <section id="banking">
-            <h2>Banking Services for Students and Employees</h2>
-            <ul>
+    <!-- Detailed Sections -->
+    <main class="container mx-auto">
+        <!-- Banking Services Section -->
+        <section id="banking" class="py-12">
+            <h2 class="text-4xl font-bold mb-6">Banking Services for Students and Employees</h2>
+            <ul class="list-disc list-inside">
                 <li>Free checking accounts with no monthly maintenance fees</li>
                 <li>Low or no fees for transactions such as ATM withdrawals and payments</li>
                 <li>Convenient online banking features including mobile apps and digital statements</li>
@@ -96,16 +139,17 @@
             </ul>
         </section>
 
-        <section id="health">
-            <h2>Health Insurance Benefits</h2>
-            <ul>
+        <!-- Health Insurance Section -->
+        <section id="health" class="py-12">
+            <h2 class="text-4xl font-bold mb-6">Health Insurance Benefits</h2>
+            <ul class="list-disc list-inside">
                 <li>Comprehensive coverage including hospital stays, outpatient care, and prescription medications</li>
                 <li>Access to a wide network of healthcare providers</li>
                 <li>Preventive care services such as vaccinations and routine screenings</li>
                 <li>Discounted rates and special packages for students</li>
             </ul>
-            <h3>Why Barmer is the Best for Health Insurance</h3>
-            <ul>
+            <h3 class="text-3xl font-bold mt-8 mb-4">Why Barmer is the Best for Health Insurance</h3>
+            <ul class="list-disc list-inside">
                 <li>Extensive coverage options from basic to premium plans</li>
                 <li>Excellent customer service with 24/7 support and multilingual services</li>
                 <li>High satisfaction rate among users</li>
@@ -114,17 +158,107 @@
             </ul>
         </section>
 
-        <section id="liability">
-            <h2>Liability Insurance Benefits</h2>
-            <ul>
+        <!-- Liability Insurance Section -->
+        <section id="liability" class="py-12">
+            <h2 class="text-4xl font-bold mb-6">Liability Insurance Benefits</h2>
+            <ul class="list-disc list-inside">
                 <li>Protection against personal liability claims</li>
                 <li>Coverage for damages and legal costs</li>
                 <li>Special packages for students and employees</li>
                 <li>Essential for international students and employees</li>
             </ul>
-            <h3>Why Feather Insurance is the Best for Liability and Legal Insurance</h3>
-            <ul>
+            <h3 class="text-3xl font-bold mt-8 mb-4">Why Feather Insurance is the Best for Liability and Legal Insurance</h3>
+            <ul class="list-disc list-inside">
                 <li>Comprehensive liability and legal coverage</li>
                 <li>Easy online application process</li>
                 <li>Affordable rates for students and employees</li>
-                <li>
+                <li>Excellent customer reviews and high satisfaction</li>
+            </ul>
+        </section>
+
+        <!-- Study Opportunities in Germany -->
+        <section id="study" class="py-12">
+            <h2 class="text-4xl font-bold mb-6">Study Opportunities in Germany</h2>
+            <ul class="list-disc list-inside">
+                <li>World-class education system with top-ranked universities</li>
+                <li>Affordable tuition fees at public universities</li>
+                <li>Strong emphasis on research and innovation</li>
+                <li>Internship opportunities with leading companies</li>
+                <li>Pathways to stay and work after graduation</li>
+            </ul>
+        </section>
+
+        <!-- Learning German -->
+        <section id="learning-german" class="py-12">
+            <h2 class="text-4xl font-bold mb-6">Learning German</h2>
+            <ul class="list-disc list-inside">
+                <li>Enhance career opportunities by learning German</li>
+                <li>Ease of integration into German society and culture</li>
+                <li>Access to quality education in German universities</li>
+                <li>Improved travel experiences in German-speaking countries</li>
+            </ul>
+            <h3 class="text-3xl font-bold mt-8 mb-4">Basic German Phrases</h3>
+            <ul class="list-disc list-inside">
+                <li>Guten Morgen (Good morning)</li>
+                <li>Wie geht's? (How are you?)</li>
+                <li>Danke (Thank you)</li>
+                <li>Entschuldigung (Excuse me)</li>
+                <li>Wo ist...? (Where is...?)</li>
+            </ul>
+        </section>
+
+        <!-- Comparison Section -->
+        <section id="comparison" class="py-12">
+            <h2 class="text-4xl font-bold mb-6">Comparison: Barmer vs. Feather Insurance</h2>
+            <table class="min-w-full bg-white">
+                <thead>
+                    <tr>
+                        <th class="py-2 px-4 bg-blue-900 text-white">Feature</th>
+                        <th class="py-2 px-4 bg-blue-900 text-white">Barmer (Health Insurance)</th>
+                        <th class="py-2 px-4 bg-blue-900 text-white">Feather (Liability and Legal Insurance)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border px-4 py-2">Coverage Options</td>
+                        <td class="border px-4 py-2">Extensive</td>
+                        <td class="border px-4 py-2">Comprehensive</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2">Customer Service</td>
+                        <td class="border px-4 py-2">24/7 Support, Multilingual</td>
+                        <td class="border px-4 py-2">Excellent, Highly Rated</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2">Premiums</td>
+                        <td class="border px-4 py-2">Affordable with Discounts</td>
+                        <td class="border px-4 py-2">Affordable Rates</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2">Additional Benefits</td>
+                        <td class="border px-4 py-2">Wellness Programs, Fitness Discounts</td>
+                        <td class="border px-4 py-2">Easy Online Application, High Satisfaction</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Video Section -->
+        <section id="video" class="py-12">
+            <h2 class="text-4xl font-bold mb-6 text-center">Watch Our Introduction Video</h2>
+            <div class="flex justify-center">
+                <iframe class="w-full md:w-2/3 h-64 md:h-96" src="https://www.youtube.com/embed/6RSV3JY9j0Q" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 RRR Group. All rights reserved.</p>
+            <p>Contact us at <a href="mailto:info@rrrgroup.me" class="text-yellow-300 hover:text-yellow-400">info@rrrgroup.me</a></p>
+            <p>Call us at <span class="text-yellow-300">+4915219739709</span></p>
+        </div>
+    </footer>
+</body>
+</html>
