@@ -32,59 +32,77 @@
             transform: translate(-50%, -50%);
             text-align: center;
             color: white;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
         }
         .floating-nav {
-            position: absolute;
+            position: fixed;
             top: 0;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
             z-index: 10;
+            padding: 20px;
         }
         .floating-nav a {
+            color: white;
             margin: 0 10px;
         }
         .feedback-form {
             position: fixed;
-            top: 50px;
-            right: 50px;
-            background: rgba(255, 255, 255, 0.8);
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
             z-index: 100;
-            width: 300px;
+            width: 350px;
             height: 500px;
+        }
+        .feedback-form h3 {
+            color: #333;
         }
         .feedback-form iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
+        .content-section {
+            display: none;
+        }
     </style>
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.style.display = section.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
 </head>
 
 <body class="bg-gray-100 text-gray-800">
 
     <!-- Navigation -->
-    <header class="bg-blue-900 text-white shadow-lg fixed w-full z-50">
-        <div class="container mx-auto flex justify-between items-center p-5">
+    <header class="floating-nav">
+        <div class="container mx-auto flex justify-between items-center">
             <img src="logo.png" alt="Company Logo" class="h-16 w-16 rounded-full">
             <nav class="flex space-x-6 text-lg">
-                <a href="#overview" class="bg-white text-blue-900 px-4 py-2 rounded hover:bg-yellow-300 transition duration-300">Overview</a>
-                <a href="#banking" class="bg-white text-blue-900 px-4 py-2 rounded hover:bg-yellow-300 transition duration-300">Banking Services</a>
-                <a href="#health" class="bg-white text-blue-900 px-4 py-2 rounded hover:bg-yellow-300 transition duration-300">Health Insurance</a>
-                <a href="#liability" class="bg-white text-blue-900 px-4 py-2 rounded hover:bg-yellow-300 transition duration-300">Liability Insurance</a>
-                <a href="#study" class="bg-white text-blue-900 px-4 py-2 rounded hover:bg-yellow-300 transition duration-300">Study Opportunities</a>
-                <a href="#learning-german" class="bg-white text-blue-900 px-4 py-2 rounded hover:bg-yellow-300 transition duration-300">Learning German</a>
-                <a href="#comparison" class="bg-white text-blue-900 px-4 py-2 rounded hover:bg-yellow-300 transition duration-300">Comparison</a>
-                <a href="#video" class="bg-white text-blue-900 px-4 py-2 rounded hover:bg-yellow-300 transition duration-300">Video</a>
+                <a href="javascript:void(0)" onclick="toggleSection('overview')" class="hover:text-yellow-300 transition duration-300">Overview</a>
+                <a href="javascript:void(0)" onclick="toggleSection('banking')" class="hover:text-yellow-300 transition duration-300">Banking Services</a>
+                <a href="javascript:void(0)" onclick="toggleSection('health')" class="hover:text-yellow-300 transition duration-300">Health Insurance</a>
+                <a href="javascript:void(0)" onclick="toggleSection('liability')" class="hover:text-yellow-300 transition duration-300">Liability Insurance</a>
+                <a href="javascript:void(0)" onclick="toggleSection('study')" class="hover:text-yellow-300 transition duration-300">Study Opportunities</a>
+                <a href="javascript:void(0)" onclick="toggleSection('learning-german')" class="hover:text-yellow-300 transition duration-300">Learning German</a>
+                <a href="javascript:void(0)" onclick="toggleSection('comparison')" class="hover:text-yellow-300 transition duration-300">Comparison</a>
+                <a href="javascript:void(0)" onclick="toggleSection('video')" class="hover:text-yellow-300 transition duration-300">Video</a>
             </nav>
         </div>
     </header>
 
     <!-- Feedback Form -->
     <div class="feedback-form">
+        <h3 class="text-2xl font-bold mb-4">Connect with Us</h3>
+        <p class="mb-4">Fill out the form to get in touch!</p>
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc3d4w8y3A4__75-SBAhCxHnBHwmWkXGswgzch_YTeFjSh_uw/viewform"></iframe>
     </div>
 
@@ -105,7 +123,7 @@
     <section class="image-bg"></section>
 
     <!-- Overview Section -->
-    <section id="overview" class="container mx-auto py-12">
+    <section id="overview" class="content-section container mx-auto py-12">
         <h2 class="text-4xl font-bold mb-6 text-center">Overview of Our Services</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="bg-white p-6 rounded-lg shadow-lg animate__animated animate__fadeInLeft">
@@ -152,7 +170,7 @@
     <!-- Detailed Sections -->
     <main class="container mx-auto">
         <!-- Banking Services Section -->
-        <section id="banking" class="py-12">
+        <section id="banking" class="content-section py-12">
             <h2 class="text-4xl font-bold mb-6">Banking Services for Students and Employees</h2>
             <ul class="list-disc list-inside">
                 <li>Free checking accounts with no monthly maintenance fees</li>
@@ -163,7 +181,7 @@
         </section>
 
         <!-- Health Insurance Section -->
-        <section id="health" class="py-12">
+        <section id="health" class="content-section py-12">
             <h2 class="text-4xl font-bold mb-6">Health Insurance Benefits</h2>
             <ul class="list-disc list-inside">
                 <li>Comprehensive coverage including hospital stays, outpatient care, and prescription medications</li>
@@ -182,7 +200,7 @@
         </section>
 
         <!-- Liability Insurance Section -->
-        <section id="liability" class="py-12">
+        <section id="liability" class="content-section py-12">
             <h2 class="text-4xl font-bold mb-6">Liability Insurance Benefits</h2>
             <ul class="list-disc list-inside">
                 <li>Protection against personal liability claims</li>
@@ -200,7 +218,7 @@
         </section>
 
         <!-- Study Opportunities in Germany -->
-        <section id="study" class="py-12">
+        <section id="study" class="content-section py-12">
             <h2 class="text-4xl font-bold mb-6">Study Opportunities in Germany</h2>
             <ul class="list-disc list-inside">
                 <li>World-class education system with top-ranked universities</li>
@@ -212,7 +230,7 @@
         </section>
 
         <!-- Learning German -->
-        <section id="learning-german" class="py-12">
+        <section id="learning-german" class="content-section py-12">
             <h2 class="text-4xl font-bold mb-6">Learning German</h2>
             <ul class="list-disc list-inside">
                 <li>Enhance career opportunities by learning German</li>
@@ -231,7 +249,7 @@
         </section>
 
         <!-- Comparison Section -->
-        <section id="comparison" class="py-12">
+        <section id="comparison" class="content-section py-12">
             <h2 class="text-4xl font-bold mb-6">Comparison: Barmer vs. Feather Insurance</h2>
             <table class="min-w-full bg-white">
                 <thead>
@@ -267,7 +285,7 @@
         </section>
 
         <!-- Video Section -->
-        <section id="video" class="py-12">
+        <section id="video" class="content-section py-12">
             <h2 class="text-4xl font-bold mb-6 text-center">Watch Our Introduction Video</h2>
             <div class="flex justify-center">
                 <iframe class="w-full md:w-2/3 h-64 md:h-96" src="https://www.youtube.com/embed/6RSV3JY9j0Q" frameborder="0" allowfullscreen></iframe>
