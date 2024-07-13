@@ -53,6 +53,13 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             z-index: 100;
+            width: 300px;
+            height: 500px;
+        }
+        .feedback-form iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
     </style>
 </head>
@@ -78,22 +85,7 @@
 
     <!-- Feedback Form -->
     <div class="feedback-form">
-        <h3 class="text-2xl font-bold mb-4">Feedback Form</h3>
-        <form>
-            <label class="block mb-2">
-                Name:
-                <input type="text" class="w-full p-2 border border-gray-300 rounded">
-            </label>
-            <label class="block mb-2">
-                Email:
-                <input type="email" class="w-full p-2 border border-gray-300 rounded">
-            </label>
-            <label class="block mb-2">
-                Feedback:
-                <textarea class="w-full p-2 border border-gray-300 rounded" rows="4"></textarea>
-            </label>
-            <button type="submit" class="bg-blue-900 text-white px-4 py-2 rounded hover:bg-yellow-300 transition duration-300">Submit</button>
-        </form>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc3d4w8y3A4__75-SBAhCxHnBHwmWkXGswgzch_YTeFjSh_uw/viewform"></iframe>
     </div>
 
     <!-- Hero Section with Video -->
