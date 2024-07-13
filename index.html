@@ -33,6 +33,9 @@
             text-align: center;
             color: white;
             text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
         }
         .floating-nav {
             position: fixed;
@@ -46,6 +49,7 @@
         .floating-nav a {
             color: white;
             margin: 0 10px;
+            cursor: pointer;
         }
         .feedback-form {
             position: fixed;
@@ -68,14 +72,11 @@
             height: 100%;
             border: none;
         }
-        .content-section {
-            display: none;
-        }
     </style>
     <script>
-        function toggleSection(sectionId) {
+        function scrollToSection(sectionId) {
             const section = document.getElementById(sectionId);
-            section.style.display = section.style.display === 'none' ? 'block' : 'none';
+            section.scrollIntoView({ behavior: 'smooth' });
         }
     </script>
 </head>
@@ -87,14 +88,14 @@
         <div class="container mx-auto flex justify-between items-center">
             <img src="logo.png" alt="Company Logo" class="h-16 w-16 rounded-full">
             <nav class="flex space-x-6 text-lg">
-                <a href="javascript:void(0)" onclick="toggleSection('overview')" class="hover:text-yellow-300 transition duration-300">Overview</a>
-                <a href="javascript:void(0)" onclick="toggleSection('banking')" class="hover:text-yellow-300 transition duration-300">Banking Services</a>
-                <a href="javascript:void(0)" onclick="toggleSection('health')" class="hover:text-yellow-300 transition duration-300">Health Insurance</a>
-                <a href="javascript:void(0)" onclick="toggleSection('liability')" class="hover:text-yellow-300 transition duration-300">Liability Insurance</a>
-                <a href="javascript:void(0)" onclick="toggleSection('study')" class="hover:text-yellow-300 transition duration-300">Study Opportunities</a>
-                <a href="javascript:void(0)" onclick="toggleSection('learning-german')" class="hover:text-yellow-300 transition duration-300">Learning German</a>
-                <a href="javascript:void(0)" onclick="toggleSection('comparison')" class="hover:text-yellow-300 transition duration-300">Comparison</a>
-                <a href="javascript:void(0)" onclick="toggleSection('video')" class="hover:text-yellow-300 transition duration-300">Video</a>
+                <a onclick="scrollToSection('overview')" class="hover:text-yellow-300 transition duration-300">Overview</a>
+                <a onclick="scrollToSection('banking')" class="hover:text-yellow-300 transition duration-300">Banking Services</a>
+                <a onclick="scrollToSection('health')" class="hover:text-yellow-300 transition duration-300">Health Insurance</a>
+                <a onclick="scrollToSection('liability')" class="hover:text-yellow-300 transition duration-300">Liability Insurance</a>
+                <a onclick="scrollToSection('study')" class="hover:text-yellow-300 transition duration-300">Study Opportunities</a>
+                <a onclick="scrollToSection('learning-german')" class="hover:text-yellow-300 transition duration-300">Learning German</a>
+                <a onclick="scrollToSection('comparison')" class="hover:text-yellow-300 transition duration-300">Comparison</a>
+                <a onclick="scrollToSection('video')" class="hover:text-yellow-300 transition duration-300">Video</a>
             </nav>
         </div>
     </header>
@@ -115,7 +116,7 @@
             <h1 class="text-6xl font-bold mb-4">Get the Best Services with RRR Group</h1>
             <p class="text-2xl mb-6">Your guide to the best banking, health insurance, and liability insurance services in Germany.</p>
             <p class="text-xl mb-4">Call us at: <span class="font-bold">+4915219739709</span></p>
-            <a href="#overview" class="bg-yellow-400 text-gray-800 px-6 py-3 rounded-lg hover:bg-yellow-500 transition duration-300">Learn More</a>
+            <a onclick="scrollToSection('overview')" class="bg-yellow-400 text-gray-800 px-6 py-3 rounded-lg hover:bg-yellow-500 transition duration-300 cursor-pointer">Learn More</a>
         </div>
     </section>
 
@@ -123,7 +124,7 @@
     <section class="image-bg"></section>
 
     <!-- Overview Section -->
-    <section id="overview" class="content-section container mx-auto py-12">
+    <section id="overview" class="container mx-auto py-12">
         <h2 class="text-4xl font-bold mb-6 text-center">Overview of Our Services</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="bg-white p-6 rounded-lg shadow-lg animate__animated animate__fadeInLeft">
@@ -170,7 +171,7 @@
     <!-- Detailed Sections -->
     <main class="container mx-auto">
         <!-- Banking Services Section -->
-        <section id="banking" class="content-section py-12">
+        <section id="banking" class="py-12">
             <h2 class="text-4xl font-bold mb-6">Banking Services for Students and Employees</h2>
             <ul class="list-disc list-inside">
                 <li>Free checking accounts with no monthly maintenance fees</li>
@@ -181,7 +182,7 @@
         </section>
 
         <!-- Health Insurance Section -->
-        <section id="health" class="content-section py-12">
+        <section id="health" class="py-12">
             <h2 class="text-4xl font-bold mb-6">Health Insurance Benefits</h2>
             <ul class="list-disc list-inside">
                 <li>Comprehensive coverage including hospital stays, outpatient care, and prescription medications</li>
@@ -200,7 +201,7 @@
         </section>
 
         <!-- Liability Insurance Section -->
-        <section id="liability" class="content-section py-12">
+        <section id="liability" class="py-12">
             <h2 class="text-4xl font-bold mb-6">Liability Insurance Benefits</h2>
             <ul class="list-disc list-inside">
                 <li>Protection against personal liability claims</li>
@@ -218,7 +219,7 @@
         </section>
 
         <!-- Study Opportunities in Germany -->
-        <section id="study" class="content-section py-12">
+        <section id="study" class="py-12">
             <h2 class="text-4xl font-bold mb-6">Study Opportunities in Germany</h2>
             <ul class="list-disc list-inside">
                 <li>World-class education system with top-ranked universities</li>
@@ -230,7 +231,7 @@
         </section>
 
         <!-- Learning German -->
-        <section id="learning-german" class="content-section py-12">
+        <section id="learning-german" class="py-12">
             <h2 class="text-4xl font-bold mb-6">Learning German</h2>
             <ul class="list-disc list-inside">
                 <li>Enhance career opportunities by learning German</li>
@@ -249,7 +250,7 @@
         </section>
 
         <!-- Comparison Section -->
-        <section id="comparison" class="content-section py-12">
+        <section id="comparison" class="py-12">
             <h2 class="text-4xl font-bold mb-6">Comparison: Barmer vs. Feather Insurance</h2>
             <table class="min-w-full bg-white">
                 <thead>
@@ -285,7 +286,7 @@
         </section>
 
         <!-- Video Section -->
-        <section id="video" class="content-section py-12">
+        <section id="video" class="py-12">
             <h2 class="text-4xl font-bold mb-6 text-center">Watch Our Introduction Video</h2>
             <div class="flex justify-center">
                 <iframe class="w-full md:w-2/3 h-64 md:h-96" src="https://www.youtube.com/embed/6RSV3JY9j0Q" frameborder="0" allowfullscreen></iframe>
