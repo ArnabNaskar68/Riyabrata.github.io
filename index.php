@@ -6,9 +6,10 @@
     <title>RRR Group</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your custom CSS file -->
     <style>
         body {
-            background-image: url('https://example.com/hero-image.jpeg'); /* Ensure the image URL is also HTTPS */
+            background-image: url('hero-image.jpeg'); /* Ensure the image URL is also HTTPS */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -114,6 +115,7 @@
             }
         }
     </style>
+    <script src="script.js"></script> <!-- Link to your custom JS file -->
     <script>
         function toggleMenu() {
             const menuContent = document.getElementById('menu-content');
@@ -132,7 +134,7 @@
     <!-- Header -->
     <header class="header">
         <div class="menu-button" onclick="toggleMenu()">☰ Menu</div>
-        <img src="https://example.com/logo.png" alt="Company Logo" class="h-16 w-16 rounded-full"> <!-- Ensure the logo URL is also HTTPS -->
+        <img src="logo.png" alt="Company Logo" class="h-16 w-16 rounded-full"> <!-- Ensure the logo URL is also HTTPS -->
     </header>
 
     <!-- Menu Content -->
@@ -348,16 +350,17 @@
             <p>Contact us at <a href="mailto:info@rrrgroup.me" class="text-yellow-300 hover:text-yellow-400">info@rrrgroup.me</a></p>
             <p>Call us at <span class="text-yellow-300">+4915219739709</span></p>
             <div class="company-logos flex justify-center flex-wrap mt-4">
-                <a href="https://www.barmer.de/en" target="_blank"><img src="https://example.com/barmer-logo.png" alt="Barmer"></a>
-                <a href="https://www.tk.de/en" target="_blank"><img src="https://example.com/tk-logo.png" alt="TK"></a>
-                <a href="https://www.aok.de/en" target="_blank"><img src="https://example.com/aok-logo.png" alt="AOK"></a>
-                <a href="https://www.dak.de/en" target="_blank"><img src="https://example.com/dak-logo.png" alt="DAK"></a>
-                <a href="https://feather-insurance.com/" target="_blank"><img src="https://example.com/feather-logo.png" alt="Feather"></a>
-                <a href="https://www.amnesty.org/en" target="_blank"><img src="https://example.com/amnesty-logo.png" alt="Amnesty International"></a>
-                <a href="https://www.deutsche-bank.de/en" target="_blank"><img src="https://example.com/deutsche-bank-logo.png" alt="Deutsche Bank"></a>
-                <a href="https://n26.com/en-eu" target="_blank"><img src="https://example.com/n26-logo.png" alt="N26"></a>
+                <a href="https://www.barmer.de/en" target="_blank"><img src="https://www.barmer.de/resource/image/33362/portrait_ratio1x1/800/800/f4eab8cd94e6fa35c8721600cb94a317/Qn/barmer-logo.png" alt="Barmer"></a>
+                <a href="https://www.tk.de/en" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Techniker_Krankenkasse_Logo.svg/1024px-Techniker_Krankenkasse_Logo.svg.png" alt="TK"></a>
+                <a href="https://www.aok.de/en" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/AOK2008.svg/2048px-AOK2008.svg.png" alt="AOK"></a>
+                <a href="https://www.dak.de/dak/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/DAK-Gesundheit_logo.svg/2560px-DAK-Gesundheit_logo.svg.png" alt="DAK"></a>
+                <a href="https://feather-insurance.com/" target="_blank"><img src="https://uploads-ssl.webflow.com/5fc24e9a8218434b5f199d08/5ff88c26dcbd429c1ecf5eb9_logo_feather.svg" alt="Feather"></a>
+                <a href="https://www.amnesty.org/en" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Amnesty_International_logo.svg/1024px-Amnesty_International_logo.svg.png" alt="Amnesty International"></a>
+                <a href="https://www.deutsche-bank.de/pk.html" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Deutsche_Bank_logo_without_wordmark.svg/1024px-Deutsche_Bank_logo_without_wordmark.svg.png" alt="Deutsche Bank"></a>
+                <a href="https://n26.com/en-eu" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/N26_logo.svg/1024px-N26_logo.svg.png" alt="N26"></a>
             </div>
         </div>
     </footer>
 </body>
 </html>
+
