@@ -151,7 +151,7 @@
     <div class="feedback-form">
         <h3 class="text-2xl font-bold mb-4">Connect with Us</h3>
         <p class="mb-4">Fill out the form to get in touch!</p>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScrcKli8X4XzsMXtDHnLqwvYSfD9BF66ox2k651j-5cYJLcow/viewform?usp=sf_link"></iframe>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc3d4w8y3A4__75-SBAhCxHnBHwmWkXGswgzch_YTeFjSh_uw/viewform"></iframe>
     </div>
 
     <!-- Hero Section with Video -->
