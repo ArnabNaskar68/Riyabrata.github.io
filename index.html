@@ -6,171 +6,61 @@
     <title>RRR Group</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your custom CSS file -->
     <style>
-        body {
-            background-image: url('hero-image.jpeg'); /* Ensure the image URL is also HTTPS */
+        .hero-bg {
+            background-image: url('hero-image.jpeg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
-            color: #ffffff;
-        }
-        .hero-video {
             position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
         }
-        .hero-video iframe {
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-        .hero-text {
+        .video-bg {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white;
-            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .header {
-            position: fixed;
-            top: 0;
+            top: 100%;
             left: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 10;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
+            height: 400px;
+            z-index: -1;
+            overflow: hidden;
         }
-        .menu-button {
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            z-index: 20;
-        }
-        .menu-content {
-            display: none;
-            position: fixed;
-            top: 50px;
-            left: 20px;
-            background: rgba(0, 0, 0, 0.9);
-            color: white;
-            padding: 10px;
-            border-radius: 10px;
-            z-index: 20;
-        }
-        .menu-content a {
-            display: block;
-            margin: 5px 0;
-            text-align: left;
-            cursor: pointer;
-        }
-        .feedback-form {
-            position: fixed;
-            top: 50%;
-            right: 10px;
-            transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-            z-index: 100;
-            width: 90%;
-            max-width: 350px;
-            height: 500px;
-        }
-        .feedback-form h3 {
-            color: #333;
-        }
-        .feedback-form iframe {
+        .video-bg iframe {
             width: 100%;
             height: 100%;
-            border: none;
-        }
-        .company-logos img {
-            max-height: 50px;
-            margin: 10px;
-        }
-        @media (max-width: 768px) {
-            .hero-text h1 {
-                font-size: 4xl;
-            }
-            .hero-text p {
-                font-size: xl;
-            }
-            .feedback-form {
-                width: 80%;
-            }
-            .company-logos img {
-                max-height: 30px;
-            }
         }
     </style>
-    <script src="script.js"></script> <!-- Link to your custom JS file -->
-    <script>
-        function toggleMenu() {
-            const menuContent = document.getElementById('menu-content');
-            menuContent.style.display = menuContent.style.display === 'none' ? 'block' : 'none';
-        }
-        function scrollToSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            section.scrollIntoView({ behavior: 'smooth' });
-            toggleMenu();
-        }
-    </script>
 </head>
 
 <body class="bg-gray-100 text-gray-800">
 
-    <!-- Header -->
-    <header class="header">
-        <div class="menu-button" onclick="toggleMenu()">☰ Menu</div>
-        <img src="logo.png" alt="Company Logo" class="h-16 w-16 rounded-full"> <!-- Ensure the logo URL is also HTTPS -->
+    <!-- Navigation -->
+    <header class="bg-blue-900 text-white shadow-lg">
+        <div class="container mx-auto flex justify-between items-center p-5">
+            <img src="logo.png" alt="Company Logo" class="h-16 w-16 rounded-full">
+            <nav class="flex space-x-6 text-lg">
+                <a href="#overview" class="hover:text-yellow-300">Overview</a>
+                <a href="#banking" class="hover:text-yellow-300">Banking Services</a>
+                <a href="#health" class="hover:text-yellow-300">Health Insurance</a>
+                <a href="#liability" class="hover:text-yellow-300">Liability Insurance</a>
+                <a href="#study" class="hover:text-yellow-300">Study Opportunities</a>
+                <a href="#learning-german" class="hover:text-yellow-300">Learning German</a>
+                <a href="#comparison" class="hover:text-yellow-300">Comparison</a>
+                <a href="#video" class="hover:text-yellow-300">Video</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- Menu Content -->
-    <div id="menu-content" class="menu-content">
-        <a onclick="scrollToSection('overview')">Overview</a>
-        <a onclick="scrollToSection('banking')">Banking Services</a>
-        <a onclick="scrollToSection('health')">Health Insurance</a>
-        <a onclick="scrollToSection('liability')">Liability Insurance</a>
-        <a onclick="scrollToSection('study')">Study Opportunities</a>
-        <a onclick="scrollToSection('learning-german')">Learning German</a>
-        <a onclick="scrollToSection('comparison')">Comparison</a>
-        <a onclick="scrollToSection('video')">Video</a>
-    </div>
-
-    <!-- Feedback Form -->
-    <div class="feedback-form">
-        <h3 class="text-2xl font-bold mb-4">Connect with Us</h3>
-        <p class="mb-4">Fill out the form to get in touch!</p>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc3d4w8y3A4__75-SBAhCxHnBHwmWkXGswgzch_YTeFjSh_uw/viewform"></iframe>
-    </div>
-
-    <!-- Hero Section with Video -->
-    <section class="relative">
-        <div class="hero-video">
-            <iframe src="https://www.youtube.com/embed/6RSV3JY9j0Q?autoplay=1&mute=1&loop=1&playlist=6RSV3JY9j0Q" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="hero-text animate__animated animate__fadeIn">
+    <!-- Hero Section -->
+    <section class="hero-bg h-screen flex items-center justify-center text-center text-white animate__animated animate__fadeIn">
+        <div class="hero-text">
             <h1 class="text-6xl font-bold mb-4">Get the Best Services with RRR Group</h1>
             <p class="text-2xl mb-6">Your guide to the best banking, health insurance, and liability insurance services in Germany.</p>
-            <p class="text-xl mb-4">Call us at: <span class="font-bold">+4915219739709</span></p>
-            <a onclick="scrollToSection('overview')" class="bg-yellow-400 text-gray-800 px-6 py-3 rounded-lg hover:bg-yellow-500 transition duration-300 cursor-pointer">Learn More</a>
+            <a href="#overview" class="bg-yellow-400 text-gray-800 px-6 py-3 rounded-lg hover:bg-yellow-500 transition duration-300">Learn More</a>
         </div>
     </section>
 
-    <!-- Image Section -->
-    <section class="image-bg"></section>
+    <!-- Video Background Section -->
+    <section id="video-bg" class="video-bg">
+        <iframe src="https://www.youtube.com/embed/6RSV3JY9j0Q?autoplay=1&mute=1&loop=1&playlist=6RSV3JY9j0Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </section>
 
     <!-- Overview Section -->
     <section id="overview" class="container mx-auto py-12">
@@ -338,7 +228,7 @@
         <section id="video" class="py-12">
             <h2 class="text-4xl font-bold mb-6 text-center">Watch Our Introduction Video</h2>
             <div class="flex justify-center">
-                <iframe class="w-full md:w-2/3 h-64 md:h-96" src="https://www.youtube.com/embed/6RSV3JY9j0Q" frameborder="0" allowfullscreen></iframe>
+                <iframe class="w-full md:w-2/3 h-64 md:h-96" src="https://www.youtube.com/watch?v=6RSV3JY9j0Q" frameborder="0" allowfullscreen></iframe>
             </div>
         </section>
     </main>
@@ -348,19 +238,8 @@
         <div class="container mx-auto text-center">
             <p>&copy; 2023 RRR Group. All rights reserved.</p>
             <p>Contact us at <a href="mailto:info@rrrgroup.me" class="text-yellow-300 hover:text-yellow-400">info@rrrgroup.me</a></p>
-            <p>Call us at <span class="text-yellow-300">+4915219739709</span></p>
-            <div class="company-logos flex justify-center flex-wrap mt-4">
-                <a href="https://www.barmer.de/en" target="_blank"><img src="https://www.barmer.de/resource/image/33362/portrait_ratio1x1/800/800/f4eab8cd94e6fa35c8721600cb94a317/Qn/barmer-logo.png" alt="Barmer"></a>
-                <a href="https://www.tk.de/en" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Techniker_Krankenkasse_Logo.svg/1024px-Techniker_Krankenkasse_Logo.svg.png" alt="TK"></a>
-                <a href="https://www.aok.de/en" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/AOK2008.svg/2048px-AOK2008.svg.png" alt="AOK"></a>
-                <a href="https://www.dak.de/dak/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/DAK-Gesundheit_logo.svg/2560px-DAK-Gesundheit_logo.svg.png" alt="DAK"></a>
-                <a href="https://feather-insurance.com/" target="_blank"><img src="https://uploads-ssl.webflow.com/5fc24e9a8218434b5f199d08/5ff88c26dcbd429c1ecf5eb9_logo_feather.svg" alt="Feather"></a>
-                <a href="https://www.amnesty.org/en" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Amnesty_International_logo.svg/1024px-Amnesty_International_logo.svg.png" alt="Amnesty International"></a>
-                <a href="https://www.deutsche-bank.de/pk.html" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Deutsche_Bank_logo_without_wordmark.svg/1024px-Deutsche_Bank_logo_without_wordmark.svg.png" alt="Deutsche Bank"></a>
-                <a href="https://n26.com/en-eu" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/N26_logo.svg/1024px-N26_logo.svg.png" alt="N26"></a>
-            </div>
+            <p>Phone: +49 1521 9739709</p>
         </div>
     </footer>
 </body>
 </html>
-
