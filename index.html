@@ -15,12 +15,16 @@
             background-repeat: no-repeat;
             color: white;
         }
-        .video-container {
+        header {
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent header */
+        }
+        .sheet-container {
             position: relative;
             width: 100%;
-            padding-top: 56.25%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            margin-top: -200px; /* Adjust this value based on your needs */
         }
-        .video-container iframe {
+        .sheet-container iframe {
             position: absolute;
             top: 0;
             left: 0;
@@ -34,7 +38,7 @@
 <body class="bg-gray-800 text-white">
 
     <!-- Navigation -->
-    <header class="bg-blue-900 text-white shadow-lg">
+    <header class="bg-transparent text-white shadow-lg">
         <div class="container mx-auto flex justify-between items-center p-5">
             <img src="logo.png" alt="Company Logo" class="h-16 w-16 rounded-full">
             <nav class="flex space-x-6 text-lg">
@@ -50,9 +54,9 @@
         </div>
     </header>
 
-    <!-- Video Section -->
-    <section class="video-container">
-        <iframe src="https://www.youtube.com/embed/6RSV3JY9j0Q?autoplay=1&mute=1&loop=1&playlist=6RSV3JY9j0Q" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <!-- Google Sheet Section -->
+    <section class="sheet-container">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTQwWpXNnByo5WnU4D_L8nFWCZrKfR0S0XeALsKXc3GplD7ZVxCpftowAVnVJwVKiYXL-lA6-GNqAH5/pubhtml?widget=true&amp;headers=false"></iframe>
     </section>
 
     <!-- Overview Section -->
