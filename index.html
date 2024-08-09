@@ -7,29 +7,31 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
-        .hero-bg {
+        body {
             background-image: url('hero-image.jpeg');
             background-size: cover;
+            background-attachment: fixed;
             background-position: center;
-            position: relative;
+            background-repeat: no-repeat;
+            color: white;
         }
-        .video-bg {
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+        }
+        .video-container iframe {
             position: absolute;
-            top: 100%;
+            top: 0;
             left: 0;
             width: 100%;
-            height: 400px;
-            z-index: -1;
-            overflow: hidden;
-        }
-        .video-bg iframe {
-            width: 100%;
             height: 100%;
+            border: 0;
         }
     </style>
 </head>
 
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-800 text-white">
 
     <!-- Navigation -->
     <header class="bg-blue-900 text-white shadow-lg">
@@ -43,30 +45,21 @@
                 <a href="#study" class="hover:text-yellow-300">Study Opportunities</a>
                 <a href="#learning-german" class="hover:text-yellow-300">Learning German</a>
                 <a href="#comparison" class="hover:text-yellow-300">Comparison</a>
-                <a href="#video" class="hover:text-yellow-300">Video</a>
+                <a href="#contact" class="hover:text-yellow-300">Contact</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-bg h-screen flex items-center justify-center text-center text-white animate__animated animate__fadeIn">
-        <div class="hero-text">
-            <h1 class="text-6xl font-bold mb-4">Get the Best Services with RRR Group</h1>
-            <p class="text-2xl mb-6">Your guide to the best banking, health insurance, and liability insurance services in Germany.</p>
-            <a href="#overview" class="bg-yellow-400 text-gray-800 px-6 py-3 rounded-lg hover:bg-yellow-500 transition duration-300">Learn More</a>
-        </div>
-    </section>
-
-    <!-- Video Background Section -->
-    <section id="video-bg" class="video-bg">
-        <iframe src="https://www.youtube.com/embed/6RSV3JY9j0Q?autoplay=1&mute=1&loop=1&playlist=6RSV3JY9j0Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <!-- Video Section -->
+    <section class="video-container">
+        <iframe src="https://www.youtube.com/embed/6RSV3JY9j0Q?autoplay=1&mute=1&loop=1&playlist=6RSV3JY9j0Q" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </section>
 
     <!-- Overview Section -->
     <section id="overview" class="container mx-auto py-12">
         <h2 class="text-4xl font-bold mb-6 text-center">Overview of Our Services</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg animate__animated animate__fadeInLeft">
+            <div class="bg-blue-900 p-6 rounded-lg shadow-lg animate__animated animate__fadeInLeft">
                 <h3 class="text-3xl font-bold mb-4">Webinar Overview</h3>
                 <ul class="list-disc list-inside">
                     <li>Visa Opportunities</li>
@@ -76,7 +69,7 @@
                     <li>Exclusive Offers</li>
                 </ul>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg animate__animated animate__fadeInRight">
+            <div class="bg-blue-900 p-6 rounded-lg shadow-lg animate__animated animate__fadeInRight">
                 <h3 class="text-3xl font-bold mb-4">Why You Should Attend</h3>
                 <ul class="list-disc list-inside">
                     <li>Discover visa opportunities for Indian nationals</li>
@@ -92,15 +85,15 @@
     <!-- Features Section -->
     <section class="container mx-auto py-12">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center animate__animated animate__fadeInLeft">
+            <div class="bg-blue-900 p-6 rounded-lg shadow-lg text-center animate__animated animate__fadeInLeft">
                 <h2 class="text-2xl font-bold mb-4">Banking Services</h2>
                 <p>Free checking accounts, low fees, and convenient online banking features.</p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center animate__animated animate__fadeInUp">
+            <div class="bg-blue-900 p-6 rounded-lg shadow-lg text-center animate__animated animate__fadeInUp">
                 <h2 class="text-2xl font-bold mb-4">Health Insurance</h2>
                 <p>Comprehensive coverage, wide network of providers, and preventive care services.</p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center animate__animated animate__fadeInRight">
+            <div class="bg-blue-900 p-6 rounded-lg shadow-lg text-center animate__animated animate__fadeInRight">
                 <h2 class="text-2xl font-bold mb-4">Liability Insurance</h2>
                 <p>Protection against personal liability claims and coverage for damages and legal costs.</p>
             </div>
@@ -224,21 +217,20 @@
             </table>
         </section>
 
-        <!-- Video Section -->
-        <section id="video" class="py-12">
-            <h2 class="text-4xl font-bold mb-6 text-center">Watch Our Introduction Video</h2>
-            <div class="flex justify-center">
-                <iframe class="w-full md:w-2/3 h-64 md:h-96" src="https://www.youtube.com/watch?v=6RSV3JY9j0Q" frameborder="0" allowfullscreen></iframe>
-            </div>
+        <!-- Contact Section -->
+        <section id="contact" class="py-12 text-center">
+            <h2 class="text-4xl font-bold mb-6">Get in Touch</h2>
+            <p>If you have any questions or need assistance, feel free to reach out.</p>
+            <p>Email: <a href="mailto:info@rrrgroup.me" class="text-yellow-300 hover:text-yellow-400">info@rrrgroup.me</a></p>
+            <p>Phone: +49 1521 9739709</p>
         </section>
+
     </main>
 
     <!-- Footer -->
     <footer class="bg-blue-900 text-white py-8">
         <div class="container mx-auto text-center">
             <p>&copy; 2023 RRR Group. All rights reserved.</p>
-            <p>Contact us at <a href="mailto:info@rrrgroup.me" class="text-yellow-300 hover:text-yellow-400">info@rrrgroup.me</a></p>
-            <p>Phone: +49 1521 9739709</p>
         </div>
     </footer>
 </body>
