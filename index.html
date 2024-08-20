@@ -12,6 +12,9 @@
             height: 100%;
             font-family: Arial, sans-serif;
             background-color: #000;
+            background-image: url('hero-image.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
         }
         .video-bg {
             position: fixed;
@@ -26,6 +29,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            opacity: 0.5;
         }
         .header {
             position: fixed;
@@ -41,6 +45,23 @@
             margin: 0 15px;
             text-decoration: none;
         }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 8px #000;
+            margin-top: 20vh;
+        }
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: bold;
+        }
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
         .content {
             position: relative;
             z-index: 1;
@@ -49,6 +70,26 @@
             border-radius: 10px;
             margin: 150px auto;
             max-width: 800px;
+        }
+        .content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .content h3 {
+            font-size: 2rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .content p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .content ul {
+            margin-bottom: 20px;
+        }
+        .content ul li {
+            margin-bottom: 5px;
         }
 
         /* Floating Feedback Form */
@@ -104,192 +145,79 @@
     <header class="header">
         <nav>
             <a href="#overview">Overview</a>
-            <a href="#banking">Banking Services</a>
-            <a href="#health">Health Insurance</a>
-            <a href="#liability">Liability Insurance</a>
-            <a href="#study">Study Opportunities</a>
-            <a href="#learning-german">Learning German</a>
-            <a href="#comparison">Comparison</a>
-            <a href="#video">Video</a>
+            <a href="#about-us">About Us</a>
+            <a href="#services">Our Services</a>
+            <a href="#contact">Contact Us</a>
+            <a href="#connect">Connect With Us</a>
         </nav>
     </header>
 
-      <!-- Hero Section -->
-    <header>
-        <div class="hero hidden">
-            <h1>Get the Best Services with RRR Group</h1>
-            <p>Your guide to the best banking, health insurance, and liability insurance services in Germany.</p>
-            <p>Call us at: <span class="font-bold">+4915219739709</span></p>
-            <a href="#overview" class="btn-primary">Learn More</a>
-        </div>
-    </header>
-
-    <!-- Video Section -->
-    <div class="video-container hidden">
-        <iframe src="https://www.youtube.com/embed/6RSV3JY9j0Q?autoplay=1&mute=1&loop=1&playlist=6RSV3JY9j0Q" frameborder="0" allowfullscreen></iframe>
+    <!-- Hero Section with Heading -->
+    <div class="hero-content">
+        <h1>RRR Group</h1>
+        <p>Your Guide to the Best Services in Germany</p>
     </div>
 
-    <!-- Main Content -->
-    <main class="hidden">
-        <!-- Features Section -->
-        <section id="features">
-            <div class="feature-block">
-                <h2>Banking Services</h2>
-                <p>Free checking accounts, low fees, and convenient online banking features.</p>
-            </div>
-            <div class="feature-block">
-                <h2>Health Insurance</h2>
-                <p>Comprehensive coverage, wide network of providers, and preventive care services.</p>
-            </div>
-            <div class="feature-block">
-                <h2>Liability Insurance</h2>
-                <p>Protection against personal liability claims and coverage for damages and legal costs.</p>
-            </div>
-        </section>
+    <!-- Main Content Sections -->
+    <section id="overview" class="content">
+        <h2>Welcome to RRR Group</h2>
+        <p>At RRR Group, we are dedicated to making your transition to Germany as smooth and stress-free as possible. Whether you're planning to move, already living in Germany, or seeking support in various aspects of your new life, we are here to help every step of the way.</p>
+    </section>
 
-        <!-- Overview Section -->
-        <section id="overview">
-            <h2>Overview of Our Services</h2>
-            <div class="grid">
-                <div class="feature-block">
-                    <h3>Webinar Overview</h3>
-                    <ul>
-                        <li>Visa Opportunities</li>
-                        <li>Job Market Insights</li>
-                        <li>Study in Germany</li>
-                        <li>Expert Advice</li>
-                        <li>Exclusive Offers</li>
-                    </ul>
-                </div>
-                <div class="feature-block">
-                    <h3>Why You Should Attend</h3>
-                    <ul>
-                        <li>Discover visa opportunities for Indian nationals</li>
-                        <li>Gain insights into the German job market</li>
-                        <li>Get guidance on studying in Germany</li>
-                        <li>Hear from industry experts</li>
-                        <li>Receive exclusive offers on courses</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <section id="about-us" class="content">
+        <h2>About Us</h2>
+        <h3>Who We Are</h3>
+        <p>RRR Group is a specialized service provider focused on assisting newcomers and residents in Germany. Our mission is to empower individuals by offering comprehensive support services tailored to meet the diverse needs of expatriates, students, and professionals.</p>
+        <h3>Our Story</h3>
+        <p>Founded with the goal of bridging the gap between challenges and opportunities in Germany, RRR Group has grown into a trusted partner for those navigating the complexities of life abroad. We understand the unique challenges you face and are committed to providing solutions that make your journey easier.</p>
+        <h3>Why Choose Us</h3>
+        <ul>
+            <li><strong>Personalized Support:</strong> We offer customized services to meet your specific needs, whether it's visa assistance, job search support, or navigating the German healthcare system.</li>
+            <li><strong>Trusted Expertise:</strong> With our in-depth knowledge and extensive network, we connect you with the best services and opportunities in Germany.</li>
+            <li><strong>End-to-End Solutions:</strong> From the moment you decide to move to Germany, until you're fully settled, RRR Group is by your side, offering guidance and support at every stage.</li>
+        </ul>
+    </section>
 
-        <!-- Detailed Sections -->
-        <section id="banking">
-            <h2>Banking Services for Students and Employees</h2>
-            <ul>
-                <li>Free checking accounts with no monthly maintenance fees</li>
-                <li>Low or no fees for transactions such as ATM withdrawals and payments</li>
-                <li>Convenient online banking features including mobile apps and digital statements</li>
-                <li>Special student offers and discounts on loans and credit cards</li>
-            </ul>
-        </section>
+    <section id="services" class="content">
+        <h2>Our Services</h2>
+        <h3>Visa Assistance</h3>
+        <p>Navigate the visa process with ease. We provide expert guidance to help you understand the requirements, prepare your documents, and submit your application confidently.</p>
+        <h3>CV Check & Enhancement</h3>
+        <p>Stand out in the German job market with a professionally tailored CV. We ensure your resume meets local standards and highlights your strengths effectively.</p>
+        <h3>Documentation Help</h3>
+        <p>Ensure all your paperwork is in order with our thorough document review and submission service. We take care of the details, so you don’t have to worry.</p>
+        <h3>Job Search Assistance</h3>
+        <p>Tap into our network to find job opportunities that match your skills and aspirations. We help you connect with potential employers and prepare for interviews.</p>
+        <h3>Skills Test Preparation</h3>
+        <p>Increase your chances of success with our specialized test preparation resources and coaching. We help you excel in the assessments required by employers.</p>
+        <h3>Health & Travel Insurance</h3>
+        <p>Get comprehensive insurance coverage tailored to your needs, including health and travel insurance. We work with leading providers to offer you the best options.</p>
+        <h3>Tax & Legal Assistance</h3>
+        <p>We provide expert advice on managing taxes and legal matters in Germany. Whether you're facing tax issues or need legal guidance, our team is here to help.</p>
+        <h3>Accommodation Assistance</h3>
+        <p>Struggling to find a place to stay? Our accommodation assistance service helps you secure housing that suits your needs and budget.</p>
+    </section>
 
-        <section id="health">
-            <h2>Health Insurance Benefits</h2>
-            <ul>
-                <li>Comprehensive coverage including hospital stays, outpatient care, and prescription medications</li>
-                <li>Access to a wide network of healthcare providers</li>
-                <li>Preventive care services such as vaccinations and routine screenings</li>
-                <li>Discounted rates and special packages for students</li>
-            </ul>
-            <h3>Why Barmer is the Best for Health Insurance</h3>
-            <ul>
-                <li>Extensive coverage options from basic to premium plans</li>
-                <li>Excellent customer service with 24/7 support and multilingual services</li>
-                <li>High satisfaction rate among users</li>
-                <li>Affordable premiums with discounts for students and young professionals</li>
-                <li>Additional benefits such as wellness programs and fitness discounts</li>
-            </ul>
-        </section>
+    <section id="contact" class="content">
+        <h2>Contact Us</h2>
+        <p>We’d love to hear from you! Whether you have a question, need support, or want to learn more about our services, don’t hesitate to get in touch.</p>
+        <p><strong>Phone:</strong> +49 1521 9739709</p>
+        <p><strong>Email:</strong> <a href="mailto:admin@rrrgroup.com">admin@rrrgroup.com</a></p>
+        <p><strong>Get Started Today!</strong> Ready to take the next step? Contact us now, and let’s start your journey to a successful life in Germany together.</p>
+    </section>
 
-        <section id="liability">
-            <h2>Liability Insurance Benefits</h2>
-            <ul>
-                <li>Protection against personal liability claims</li>
-                <li>Coverage for damages and legal costs</li>
-                <li>Special packages for students and employees</li>
-                <li>Essential for international students and employees</li>
-            </ul>
-            <h3>Why Feather Insurance is the Best for Liability and Legal Insurance</h3>
-            <ul>
-                <li>Comprehensive liability and legal coverage</li>
-                <li>Easy online application process</li>
-                <li>Affordable rates for students and employees</li>
-                <li>Excellent customer reviews and high satisfaction</li>
-            </ul>
-        </section>
+    <It seems that the content got cut off due to length restrictions. Let me finish the provided code snippet so you can integrate it fully into your website.
 
-        <section id="study">
-            <h2>Study Opportunities in Germany</h2>
-            <ul>
-                <li>World-class education system with top-ranked universities</li>
-                <li>Affordable tuition fees at public universities</li>
-                <li>Strong emphasis on research and innovation</li>
-                <li>Internship opportunities with leading companies</li>
-                <li>Pathways to stay and work after graduation</li>
-            </ul>
-        </section>
-
-        <section id="learning-german">
-            <h2>Learning German</h2>
-            <ul>
-                <li>Enhance career opportunities by learning German</li>
-                <li>Ease of integration into German society and culture</li>
-                <li>Access to quality education in German universities</li>
-                <li>Improved travel experiences in German-speaking countries</li>
-            </ul>
-            <h3>Basic German Phrases</h3>
-            <ul>
-                <li>Guten Morgen (Good morning)</li>
-                <li>Wie geht's? (How are you?)</li>
-                <li>Danke (Thank you)</li>
-                <li>Entschuldigung (Excuse me)</li>
-                <li>Wo ist...? (Where is...?)</li>
-            </ul>
-        </section>
-
-        <section id="comparison">
-            <h2>Comparison: Barmer vs. Feather Insurance</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Barmer (Health Insurance)</th>
-                        <th>Feather (Liability and Legal Insurance)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Coverage Options</td>
-                        <td>Extensive</td>
-                        <td>Comprehensive</td>
-                    </tr>
-                    <tr>
-                        <td>Customer Service</td>
-                        <td>24/7 Support, Multilingual</td>
-                        <td>Excellent, Highly Rated</td>
-                    </tr>
-                    <tr>
-                        <td>Premiums</td>
-                        <td>Affordable with Discounts</td>
-                        <td>Affordable Rates</td>
-                    </tr>
-                    <tr>
-                        <td>Additional Benefits</td>
-                        <td>Wellness Programs, Fitness Discounts</td>
-                        <td>Easy Online Application, High Satisfaction</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section id="video">
-            <h2>Watch Our Introduction Video</h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/6RSV3JY9j0Q" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </section>
+```html
+    <section id="connect" class="content">
+        <h2>Connect With Us</h2>
+        <p>Stay updated with our latest news and offers by following us on social media:</p>
+        <ul>
+            <li>Facebook</li>
+            <li>LinkedIn</li>
+            <li>Instagram</li>
+        </ul>
+    </section>
 
     <!-- Feedback Form Modal -->
     <div id="feedbackModal" class="modal">
