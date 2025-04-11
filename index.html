@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RRR Group - Your comprehensive guide to life in Germany. Expert assistance with visas, job search, and integration services.">
+    <meta name="keywords" content="Germany, visa assistance, job search, CV check, integration, expats, immigration">
+    <meta name="author" content="RRR Group">
+    <meta property="og:title" content="RRR Group - Your Guide to Germany">
+    <meta property="og:description" content="Expert assistance for your journey to Germany">
+    <meta property="og:image" content="path-to-your-logo.jpg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>RRR Group - Your Guide to Germany</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            background: linear-gradient(135deg, #E3F2FD 0%, #90CAF9 100%);  /* Soft blue gradient */
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .logo {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            z-index: 1001;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            border-radius: 10px;
+        }
+
+        .logo-text {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        .video-container {
+            z-index: 1;
+            margin-bottom: 20px;
+            height: 100%;
+            width: 100%;
+        }
+    
+        .video-container video {
+            filter: brightness(0.7);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-section {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color:white;
+            width: 80%;
+        }
+
+        .overlay h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .overlay p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #F6AD55;
+            color: #1A365D; 
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: #ED8936;
+            transform: translateY(-2px);
+        }
+
+        .content {
+            width: 85vw;
+            position: relative;
+            z-index: 2;
+            padding: 40px;
+            background: linear-gradient(145deg, #2C5282, #2B6CB0);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border-radius: 10px;
+            margin: 30px auto;
+            max-width: 1200px;
+        }
+
+        .content:hover {
+            transform: translateY(-5px);
+        }
+
+        .content h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: white;
+        }
+        .content h3 {
+            font-size: 2.2rem;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: #fefefe;
+        }
+        .content p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            line-height: 1.8; 
+            color: #fefefe;
+        }
+        .content ul {
+            margin-bottom: 20px;
+        }
+        .content ul li {
+            margin-bottom: 5px;
+            color: #fefefe;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+        }
+        .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-left: 200px; /* Add margin to prevent overlap with logo */
+}
+.language-switcher {
+    position: relative;
+    margin-left: 2rem;
+}
+    .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end; /* Change from space-between to flex-end */
+    align-items: center;
+    padding-right: 20px; /* Add some padding on the right */
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-left: 200px; /* Add margin to prevent overlap with logo */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: #F6AD55;
+}
+
+.language-switcher {
+    position: relative;
+    margin-left: 2rem;
+}
+
+.language-switcher select {
+    appearance: none;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.language-switcher select:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.language-switcher::after {
+    content: '▼';
+    font-size: 0.8rem;
+    color: white;
+    position: absolute;
+    right: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        margin-left: 0; /* Reset margin for mobile view */
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-container {
+        justify-content: space-between; /* Adjust for mobile */
+        padding-right: 0;
+    }
+}
+.language-switcher::after {
+    content: '▼';
+    font-size: 0.8rem;
+    color: white;
+    position: absolute;
+    right: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+        .header nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 10px 0;
+        }
+        .header nav a {
+            color: white;
+            margin: 5px 0;
+            text-decoration: none;
+            position: relative;
+            padding: 5px 0;
+        }
+        .header nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #F6AD55;  /* Warm orange underline */
+            transition: width 0.3s ease;
+        }
+        .header nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Floating Feedback Form */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: #EDF2F7;  /* Light grey background */
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 8px;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background: linear-gradient(145deg, #2D3748, #1A365D);  /* Dark blue gradient */
+        }
+
+        /* Add accent colors for highlights */
+        ::selection {
+            background: #F6AD55;
+            color: #1A365D;
+        }
+
+        /* Add these styles to your existing CSS */
+        .content-with-image {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .image-container {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+
+        .cookie-banner {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            z-index: 9999;
+            backdrop-filter: blur(5px);
+        }
+
+        .cookie-banner.show {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .cookie-banner p {
+            margin: 0;
+        }
+
+        .cookie-banner .cta-button {
+            padding: 0.5rem 1rem;
+            margin-left: 1rem;
+        }
+
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.png" alt="RRR Group Logo">
+                <span class="logo-text">RRR Group</span>
+            </div>
+            <nav>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="nav-links">
+                    <a href="#overview">Overview</a>
+                    <a href="#about-us">About Us</a>
+                    <a href="#services">Our Services</a>
+                    <a href="#contact">Contact Us</a>
+                    <a href="#connect">Connect With Us</a>
+                    <div class="language-switcher">
+                        <select id="languageSelect" onchange="changeLanguage()">
+                            <option value="en">🇬🇧 English</option>
+                            <option value="de">🇩🇪 Deutsch</option>
+                            <option value="hi">🇮🇳 Hindi</option>
+                        </select>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+        <!-- Video Section -->
+        <div class="hero-section">
+            <div class="video-container">
+                <video autoplay muted loop>
+                    <source src="intro.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+            <div class="overlay">
+                <h1>Welcome to RRR Group</h1>
+                <p>Your trusted guide to a successful life in Germany.</p>
+                <div class="button-group">
+                    <a href="#overview" class="cta-button">Learn More</a>
+                    <button id="feedbackBtn" class="cta-button">Give Feedback</button>
+                </div>
+            </div>
+        </div>
+
+    <!-- Main Content Sections -->
+    <section id="overview" class="content">
+        <div class="content-with-image">
+            <div>
+                <h2>Welcome to RRR Group</h2>
+                <p>At RRR Group, we are dedicated to making your transition to Germany as smooth and stress-free as possible. Whether you're planning to move, already living in Germany, or seeking support in various aspects of your new life, we are here to help every step of the way.</p>
+            </div>
+            <div class="image-container">
+                <img src="intro_image.jpg" alt="German Cityscape">
+            </div>
+        </div>
+    </section>
+
+    <section id="about-us" class="content">
+        <div class="content-with-image">
+            <div class="image-container">
+                <img src="new_visitors.jpg" alt="Our Team">
+            </div>
+            <div>
+                <h2>About Us</h2>
+                <h3>Who We Are</h3>
+                <p>RRR Group is a specialized service provider focused on assisting newcomers and residents in Germany. Our mission is to empower individuals by offering comprehensive support services tailored to meet the diverse needs of expatriates, students, and professionals.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="content">
+        <h2>Our Services</h2>
+        <div class="content-with-image">
+            <div class="image-container">
+                <img src="documents.jpg" alt="Visa Assistance">
+            </div>
+            <div>
+                <h3>Visa Assistance</h3>
+                <p>Navigate the visa process with ease. We provide expert guidance to help you understand the requirements, prepare your documents, and submit your application confidently.</p>
+            </div>
+        </div>
+        
+        <div class="content-with-image" style="margin-top: 40px;">
+            <div>
+                <h3>CV Check & Enhancement</h3>
+                <p>Stand out in the German job market with a professionally tailored CV. We ensure your resume meets local standards and highlights your strengths effectively.</p>
+            </div>
+            <div class="image-container">
+                <img src="cv_checking.jpg" alt="CV Enhancement">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="content">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Whether you have a question, need support, or want to learn more about our services, don’t hesitate to get in touch.</p>
+        <p><strong>Phone:</strong> +49 1521 9739709</p>
+        <p><strong>Email:</strong> <a href="mailto:admin@rrrgroup.com">admin@rrrgroup.com</a></p>
+        <p><strong>Get Started Today!</strong> Ready to take the next step? Contact us now, and let’s start your journey to a successful life in Germany together.</p>
+    </section>
+
+    <section id="connect" class="content">
+        <h2>Connect With Us</h2>
+        <p>Stay updated with our latest news and offers by following us on social media:</p>
+        <ul>
+            <li><button><a href="https://www.instagram.com/getsetgo2europe/"><i class="fa-brands fa-instagram"></i></a></button></li>
+            <li><button><a href="https://www.youtube.com/@journeytogermany"><i class="fa-brands fa-youtube"></i></a></button></li>
+            <li><button><a href=""><i class="fa-brands fa-facebook"></i></a></button></li>
+        </ul>
+    </section>
+
+    <!-- Feedback Form Modal -->
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>We Value Your Feedback</h2>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScrcKli8X4XzsMXtDHnLqwvYSfD9BF66ox2k651j-5cYJLcow/viewform?usp=sf_link" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 RRR Group. All rights reserved.</p>
+            <p>Contact us at <a href="mailto:info@rrrgroup.me" class="text-yellow-300 hover:text-yellow-400">info@rrrgroup.me</a></p>
+        </div>
+    </footer>
+
+     <div id="cookie-consent" class="cookie-banner">
+    <p>We use cookies to enhance your experience. By continuing, you agree to our <a href="/privacy" class="text-yellow-300 hover:text-yellow-400">Privacy Policy</a>.</p>
+    <button onclick="acceptCookies()" class="cta-button">Accept All Cookies</button>
+     </div>
+
+    <script>
+        const translations = {
+            en: {
+                overview: "Overview",
+                aboutUs: "About Us",
+                services: "Our Services",
+                contact: "Contact Us",
+                connect: "Connect With Us",
+                welcome: "Welcome to RRR Group",
+                subtitle: "Your trusted guide to a successful life in Germany.",
+                learnMore: "Learn More",
+                giveFeedback: "Give Feedback",
+                aboutTitle: "Who We Are",
+                aboutText: "RRR Group is a specialized service provider focused on assisting newcomers and residents in Germany.",
+                contactText: "We'd love to hear from you! Whether you have a question, need support, or want to learn more about our services, don't hesitate to get in touch."
+            },
+            de: {
+                overview: "Überblick",
+                aboutUs: "Über uns",
+                services: "Unsere Dienstleistungen",
+                contact: "Kontakt",
+                connect: "Verbinden Sie sich",
+                welcome: "Willkommen bei RRR Group",
+                subtitle: "Ihr vertrauenswürdiger Begleiter für ein erfolgreiches Leben in Deutschland.",
+                learnMore: "Mehr erfahren",
+                giveFeedback: "Feedback geben",
+                aboutTitle: "Wer wir sind",
+                aboutText: "RRR Group ist ein spezialisierter Dienstleister, der sich auf die Unterstützung von Neuankömmlingen und Bewohnern in Deutschland konzentriert.",
+                contactText: "Wir freuen uns von Ihnen zu hören! Ob Sie eine Frage haben, Unterstützung benötigen oder mehr über unsere Dienstleistungen erfahren möchten, zögern Sie nicht uns zu kontaktieren."
+            },
+            hi: {
+                overview: "संक्षिप्त विवरण",
+                aboutUs: "हमारे बारे में",
+                services: "हमारी सेवाएं",
+                contact: "संपर्क करें",
+                connect: "जुड़ें",
+                welcome: "RRR Group में आपका स्वागत है",
+                subtitle: "जर्मनी में सफल जीवन के लिए आपका विश्वसनीय मार्गदर्शक।",
+                learnMore: "और जानें",
+                giveFeedback: "प्रतिक्रिया दें",
+                aboutTitle: "हम कौन हैं",
+                aboutText: "RRR Group जर्मनी में नए आने वालों और निवासियों की सहायता के लिए एक विशेष सेवा प्रदाता है।",
+                contactText: "हम आपसे सुनना पसंद करेंगे! चाहे आपके पास कोई प्रश्न हो, सहायता की आवश्यकता हो या हमारी सेवाओं के बारे में अधिक जानना चाहते हों, संपर्क करने में संकोच न करें।"
+            }
+        };
+
+        // Get the modal
+        var modal = document.getElementById("feedbackModal");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        // Get the feedback button
+        var feedbackBtn = document.getElementById("feedbackBtn");
+        
+        // When the user clicks the button, open the modal
+        feedbackBtn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // video error handler
+        document.querySelector('video').addEventListener('error', function(e) {
+            this.style.display = 'none';
+            this.parentElement.innerHTML += `
+                <div class="video-fallback" style="background-image: url('fallback-image.jpg')">
+                    <p>Video could not be loaded</p>
+                </div>
+            `;
+        });
+
+        // Add form validation to your feedback form
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.querySelector('input[type="email"]').value;
+            const message = document.querySelector('textarea').value;
+            
+            if (!email || !message) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            // Form submission logic here
+        });
+
+        // Cookie consent handler
+        function checkCookieConsent() {
+            if (!localStorage.getItem('cookieConsent')) {
+                document.getElementById('cookie-consent').classList.add('show');
+            }
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookie-consent').classList.remove('show');
+        }
+
+        // Add event listener for window load
+        window.addEventListener('load', checkCookieConsent);
+
+        // Add to your existing <script> section
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+                document.querySelector('.hamburger').classList.remove('active');
+            });
+        });
+
+        // Language switcher functionality
+        function changeLanguage() {
+            const select = document.getElementById('languageSelect');
+            const selectedLanguage = select.value;
+            const translation = translations[selectedLanguage];
+
+            // Save language preference
+            localStorage.setItem('preferredLanguage', selectedLanguage);
+
+            // Update all navigation links
+            document.querySelector('a[href="#overview"]').textContent = translation.overview;
+            document.querySelector('a[href="#about-us"]').textContent = translation.aboutUs;
+            document.querySelector('a[href="#services"]').textContent = translation.services;
+            document.querySelector('a[href="#contact"]').textContent = translation.contact;
+            document.querySelector('a[href="#connect"]').textContent = translation.connect;
+
+            // Update hero section
+            document.querySelector('.overlay h1').textContent = translation.welcome;
+            document.querySelector('.overlay p').textContent = translation.subtitle;
+            document.querySelector('a[href="#overview"].cta-button').textContent = translation.learnMore;
+            document.getElementById('feedbackBtn').textContent = translation.giveFeedback;
+
+            // Update About section
+            const aboutSection = document.querySelector('#about-us');
+            aboutSection.querySelector('h3').textContent = translation.aboutTitle;
+            aboutSection.querySelector('p').textContent = translation.aboutText;
+
+            // Update Contact section
+            const contactSection = document.querySelector('#contact');
+            const contactIntro = contactSection.querySelector('p:first-of-type');
+            contactIntro.textContent = translation.contactText;
+
+            // Update HTML lang attribute
+            document.documentElement.setAttribute('lang', selectedLanguage);
+        }
+
+        // Add this code to load saved language preference on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLanguage = localStorage.getItem('preferredLanguage');
+            if (savedLanguage) {
+                document.getElementById('languageSelect').value = savedLanguage;
+                changeLanguage();
+            }
+        });
+            
+    </script>
+
+</body>
+</html>
+``` 
